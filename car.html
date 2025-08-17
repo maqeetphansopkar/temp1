@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Tag Count Example</title>
+  <title>Car Brands</title>
   <style>
     /* Resetting default margins and padding for consistency */
     * {
@@ -14,98 +14,75 @@
 
     /* Overall body style */
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: linear-gradient(135deg, #ff0099, #493240, #0099ff);
-      color: #fff;
-      text-align: center;
-      padding: 50px;
-      height: 100vh;
+      font-family: 'Arial', sans-serif;
+      background: #f4f7fa;
+      color: #333;
       display: flex;
       justify-content: center;
       align-items: center;
-      background-attachment: fixed;
-      animation: glowingBackground 10s ease-in-out infinite;
+      height: 100vh;
+      margin: 0;
     }
 
-    /* Glowing background animation */
-    @keyframes glowingBackground {
-      0% { background: linear-gradient(135deg, #ff0099, #493240, #0099ff); }
-      50% { background: linear-gradient(135deg, #00cc99, #ff6600, #9900cc); }
-      100% { background: linear-gradient(135deg, #ff0099, #493240, #0099ff); }
+    /* Container for the content */
+    .container {
+      background-color: #fff;
+      border-radius: 8px;
+      padding: 40px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+      width: 100%;
     }
 
     /* Styling for the <ul> list */
     ul {
-      font-size: 2rem;
-      letter-spacing: 5px;
-      font-weight: bold;
-      text-transform: uppercase;
-      text-shadow: 0 0 8px rgba(255, 255, 255, 0.7), 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.9);
-      color: #ffcc00;
-      margin-bottom: 20px;
-      animation: bounceIn 2s ease-out infinite;
-      position: relative;
-      z-index: 2;
+      list-style-type: none;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 20px;
+      padding: 0;
+      color: #444;
     }
 
-    /* Bounce-in animation for the <ul> list */
-    @keyframes bounceIn {
-      0% { transform: scale(0); opacity: 0; }
-      60% { transform: scale(1.2); opacity: 1; }
-      100% { transform: scale(1); }
-    }
-
-    /* Styling for the <li> items */
+    /* Styling for each <li> item */
     li {
-      font-size: 2rem;
-      font-weight: bold;
-      padding: 15px;
+      padding: 12px;
       margin: 10px 0;
-      border-radius: 10px;
-      background: linear-gradient(45deg, #ff1493, #ff6347, #8a2be2);
-      background-size: 300% 300%;
-      color: white;
-      text-transform: capitalize;
-      transition: transform 0.3s ease, box-shadow 0.3s ease, background-position 0.6s ease;
-      box-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.3);
+      background: #f1f1f1;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      cursor: pointer;
     }
 
     /* Hover effect for <li> */
     li:hover {
-      transform: translateY(-10px);
-      background-position: 100% 100%;
-      box-shadow: 0 0 25px rgba(255, 255, 255, 0.8), 0 0 50px rgba(255, 255, 255, 0.5);
-      animation: glowingText 1s infinite alternate;
+      background: #3498db;
+      color: #fff;
+      transform: translateY(-4px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
-    /* Glowing text animation for <li> */
-    @keyframes glowingText {
-      0% { text-shadow: 0 0 10px #ffffff, 0 0 20px #ff1493, 0 0 30px #ff6347, 0 0 40px #8a2be2; }
-      100% { text-shadow: 0 0 20px #ffffff, 0 0 30px #ff1493, 0 0 40px #ff6347, 0 0 50px #8a2be2; }
-    }
-
-    /* Extra flair for text in the body */
+    /* Heading styles */
     h1 {
-      font-size: 3rem;
-      color: #ff6347;
-      text-shadow: 0 0 10px #ff1493, 0 0 30px #ff6347;
-      animation: pulseText 3s ease-in-out infinite;
-    }
-
-    /* Pulse effect for h1 */
-    @keyframes pulseText {
-      0% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.1); opacity: 0.8; }
-      100% { transform: scale(1); opacity: 1; }
+      font-size: 2rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 20px;
+      letter-spacing: 0.5px;
     }
 
   </style>
 </head>
 <body>
-	<ul>Car Brands</ul>
-	<li>Ferrari</li>
-	<li>Lamborghini</li>
-	<li>BMW</li>
-	<li>Ford</li>
+  <div class="container">
+    <h1>Car Brands</h1>
+    <ul>
+      <li>Ferrari</li>
+      <li>Lamborghini</li>
+      <li>BMW</li>
+      <li>Ford</li>
+    </ul>
+  </div>
 </body>
 </html>
